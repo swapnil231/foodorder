@@ -1,0 +1,180 @@
+.all{
+  font-family:var(--primary-font-family);
+  font-size: 14px;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+
+}
+
+/* Main CSS */
+
+.wrapper{
+  // padding:0 0 100px;
+// margin-top: 20px;
+
+  background-image:url('/assets/hand-drawn-food-elements_1411-48.avif');
+
+  // background-position: center center;
+  background-size:contain;
+    background-repeat: repeat;
+
+max-height: 100%;
+// z-index: 1;
+
+//   background-repeat: repeat;
+//  background-position: center center;
+
+
+
+
+
+}
+.wrapper .logo img{
+  max-width:40%;
+}
+.wrapper input{
+  background-color: var(--light-white);
+  border-color: var(--light-white);
+
+  color: var(--gray);
+}
+.wrapper input:focus{
+  box-shadow: none;
+}
+.wrapper .submit_btn{
+  padding:15px;
+  font-weight: 500;
+}
+.wrapper .login_with{
+  padding:15px;
+  font-size: 15px;
+  font-weight: 500;
+  transition:0.3s ease-in-out;
+}
+.wrapper .submit_btn:focus,
+.wrapper .login_with:focus{
+  box-shadow: none;
+}
+.wrapper .login_with:hover{
+  background-color:var(--gray-1);
+  border-color:var(--gray-1);
+}
+.wrapper .login_with img{
+  max-width: 8%;
+}
+
+.maindiv{
+  border: 2px solid black;
+  text-align: justify;
+
+
+
+
+
+  h4{
+    margin-left: 10px;
+  }
+  h4,p{
+    color: white;
+  }
+  p{
+    text-align:justify;
+    font-size: 1rem;
+    margin-left: 30px;
+  }
+  span{
+    margin-left: 40px;
+  }
+
+  select{
+    box-shadow: none;
+  }
+
+}
+
+
+
+.ordersummery{
+
+  padding: 10px;
+  .btn{
+    margin-left: 30px;
+  }
+
+}
+
+.contact-info{
+
+  li{
+    margin-bottom: 6px;
+    a{
+      color: var(--text-color);
+      font-size: 1rem;
+      // margin-top: 2px;
+      margin-bottom: 6px;
+    }
+
+  }
+
+}
+div.col{
+  padding: 0px !important;
+
+}
+
+.btn {border-radius: 0;}
+
+.main-btn{
+  font-weight: 800;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  padding: 0.625rem 1.875rem;
+  box-shadow: 0.125rem 0.625rem -0.625rem rgb(0 0 0 /19%);
+  -webkit-transition: all 0.4s ease-out 0s;
+  -o-transition:  all 0.4s ease-out 0s;
+  -moz-transition:all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+  border: 0.1875rem solid orange;
+  background-color: orange;
+  color:black;
+
+  &:hover{
+    background: transparent;
+    color:orange;
+  }
+
+}
+.btnGroupWrapper{
+.form-control:focus{
+  box-shadow: none;
+}
+}
+
+
+
+@media(max-width:991px){
+
+//  .maindiv{
+//   width: ;
+//  }
+.main-btn{
+  font-size: 0.5rem;
+}
+
+
+
+
+
+
+  }
+
+  @media(max-width:767px){
+
+
+
+  }
+
+
+
+

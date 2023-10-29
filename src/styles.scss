@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@100;700;800&family=Montserrat:wght@200&family=Raleway:wght@100&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+.all{
+  font-family:var(--primary-font-family);
+  font-size: 14px;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+/***************** foodwebsitecss**********///////////////////////////
+
+
+:root{
+  // --color-primary:#F5C332,
+  --primary-color:#F5C332;
+  --secondary-color:#231E41;
+  --white-color:#fff;
+  --black-color:#1c1c1c;
+
+  // text-color
+  --text-primary: #F5C332;
+  --text-secondary:#231E41;
+  --text-white:#fff;
+
+  --text-color:#555;
+  --text-gray:#999;
+
+
+  }
+  ::-webkit-scrollbar{
+    width: 0.425rem;
+  }
+
+  ::-webkit-scrollbar-track{
+
+    background:var(--white-color);
+  }
+  ::-webkit-scrollbar-thumb{
+    background: var(--primary-color);
+  }
+
+
+
+
+// ///////////////////////////END//////////////////////////////////
+
+// loginformcss////////////////////////////////////////////////////
+:root{
+  --primary-font-family: 'Poppins', sans-serif;
+  --light-white:#f5f8fa;
+  --gray:#5e6278;
+  --gray-1:#e3e3e3;
+
+}

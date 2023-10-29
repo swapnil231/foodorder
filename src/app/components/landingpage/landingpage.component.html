@@ -1,0 +1,499 @@
+<!-- <p>landingpage works!</p> -->
+
+<!-- section-1=top.banner start ------------------------------------------------->
+<div class="all">
+  <section id="Home">
+    <div class="top-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-5 col-md-6">
+            <h1>
+              Good Food choise is good investment.
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, consequuntur.
+
+            </p>
+            <button class="main-btn mt-4" (click)="gotAllProducts()">order now<img src="assets/generalicons/cart.svg"
+                class="imgicon"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- section-1=top.banner end ---------------------------------------------------->
+
+  <!-- countersection start ------------------------------------------------------------>
+  <section id="counter">
+    <div class="counter-section">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-3 col-sm-6 mb-md-0 mb-4">
+            <h2>
+              <span id="count1"></span>+
+            </h2>
+            <p>SAVINGS</p>
+
+          </div>
+          <div class="col-md-3 col-sm-6 mb-md-0 mb-4">
+            <h2>
+              <span id="count2"></span>+
+            </h2>
+            <p>PHOTOES</p>
+
+          </div>
+          <div class="col-md-3 col-sm-6 mb-md-0 mb-4">
+            <h2>
+              <span id="count3"></span>+
+            </h2>
+            <p>ROCKETS</p>
+
+          </div>
+          <div class="col-md-3 col-sm-6 mb-md-0 mb-4">
+            <h2>
+              <span id="count4"></span>+
+            </h2>
+            <p>GLOBES</p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <!-- countersection ends ----------------------------------------->
+
+  <!-- section3start ----------------------------------------------->
+  <section id="About">
+    <div class="about-section wrapper">
+      <div class="container">
+        <div class="row align-item-center">
+          <div class="col-lg-6 col-md-12 mb-lg-0 mb-5">
+            <img src="assets/images/img/img-1.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 col-mb-12 ps-lg-5">
+            <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, assumenda.</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto numquam rerum pariatur maxime quia
+              neque
+              voluptatibus dolorum saepe delectus tenetur placeat hic totam natus, nam commodi ducimus, culpa autem
+              debitis?</p>
+            <button class="main-btn mt-4">Learn More</button>
+
+          </div>
+        </div>
+        <div class="row align-item-center food-type">
+          <div class="col-lg-5 col-md-12 order-2 order-lg-1 pe-lg-5">
+            <h2>
+              Lorem ipsum dolor, sit amet consectetur adipisicing.
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ipsam qui minus, voluptatibus nam,
+              voluptates, eligendi consequuntur illum animi repellat minima ab quibusdam. Vitae perferendis dolores
+              cumque
+              quia mollitia. Quo?
+            </p>
+            <ul class="list-unstyled py-3">
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+            </ul>
+            <button class="main-btn mt-4">learn more</button>
+
+          </div>
+          <div class="col-lg-7 col-md-12 mb-lg-0 mb-5 order-1 order-lg-2">
+            <img src="assets/images/img/img-2.png" class="img-fluid">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- section3end ----------------------------------------------->
+
+  <!-- storysectionstart------------------------------------------------------------ -->
+  <section id="story">
+    <div class="story-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="text-content">
+              <h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+              </h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptatem corrupti nihil blanditiis
+                perferendis nesciunt ipsam suscipit totam, quia reiciendis! Nam, assumenda recusandae minus
+                consequuntur
+                fuga nihil expedita officia rem.</p>
+              <button class="main-btn mt-3">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- storysectionEnd------------------------------------------------------------------ -->
+
+  <!-- exploreFoodStart------------------------------------------ -->
+  <section>
+    <div class="explore-food wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="text-content text-center">
+              <h2>
+                Lorem, ipsum dolor sit amet consectetur adipisicing.
+              </h2>
+              <p id="Expore-foods">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur sint cum
+                consectetur corporis
+                laborum
+                perspiciatis. Esse quibusdam nesciunt temporibus officiis architecto officia, magnam veritatis sit
+                amet
+                nulla non doloremque voluptate.</p>
+
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <app-serchbox></app-serchbox>
+        </div>
+
+        <div class="d-flex justify-content-end">
+          <button class="main-btnsmall" (click)="gotAllProducts()">View All
+            Products</button>
+        </div>
+
+        <div>
+          <app-tags></app-tags>
+
+        </div>
+
+
+        <div class="row pt-5">
+          <div class="col-lg-4 col-md-6 mb-lg-0 mb-5" *ngFor="let el of foods">
+            <div class="card">
+
+              <img [src]="el.imageUrl" class="img-fluid" alt="" (click)="gotoDetailPage(el.id)">
+              <div class="p-4">
+
+                <h4>{{el.name}}<span class="favorite {{el.favorite?'':'not'}}">❤</span></h4>
+                <p><app-star-rating [stars]="el.stars"></app-star-rating> </p>
+                <p>{{el.origins}}</p>
+                <p>{{el.cookTime}} | serves: 1</p>
+                <span>{{el.price}} <del>$11.70</del></span>
+
+
+                <div class="row weapperow">
+                  <button class="col m-2 mt-4 main-btnsmall" (click)="gotoDetailPage(el.id)">Order Now</button>
+                  <button class="col m-2 mt-4 main-btnsmall">Add to Cart</button>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+  <!-- exploreFoodEnd------------------------------------------ -->
+
+  <!-- TestimonialsStart --------------------------------->
+  <section id="Testemonials">
+    <div class="wrapper testimonial-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-sm-12 text-center pb-4">
+            <h2>Testimonials</h2>
+          </div>
+          <div class="col-sm-12 col-lg-10">
+            <div id="carouselExampleIndicators" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="carousel-caption">
+                    <img src="assets/images/review/review-1.jpg" class="img-fluid" alt="" srcset="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi sunt odio quisquam iusto, minus
+                      dolores alias ipsa, facilis corrupti voluptas veniam nisi fugit assumenda </p>
+                    <h5>Jonathan Doe -Ux designer</h5>
+
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-caption">
+                    <img src="assets/images/review/review-2.jpg" class="img-fluid" alt="" srcset="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi sunt odio quisquam iusto, minus
+                      dolores alias ipsa, facilis corrupti voluptas veniam nisi fugit assumenda</p>
+                    <h5>Jonathan Doe -Ux designer</h5>
+
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-caption">
+                    <img src="assets/images/review/review-1.jpg" class="img-fluid" alt="" srcset="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi sunt odio quisquam iusto, minus
+                      dolores alias ipsa, facilis corrupti voluptas veniam nisi fugit assumenda.</p>
+                    <h5>Jonathan Doe -Ux designer</h5>
+
+                  </div>
+                </div>
+              </div>
+              <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button> -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </section>
+  <!-- TestimonialsEnd --------------------------------->
+
+  <!-- teamsectionstart------------------------------------------ -->
+  <section id="Team">
+    <div class="team wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 text-center pb-5">
+            <h2>They will cook for you</h2>
+
+          </div>
+          <div class="col-xl-3 col-sm-6 mb-4">
+            <div class="card">
+              <img src="assets/images/team/team1.jpg" alt="">
+              <div class="team-caption py-4 px-2">
+                <h4>Jhon Swith</h4>
+                <h6>Source chef</h6>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <div class="social-icons">
+                  <a href=""> <img src="assets/generalicons/facebook-fill.svg" alt=""></a>
+                  <a href=""> <img src="assets/generalicons/twitter-original.svg"></a>
+                  <a href=""> <img src="assets/generalicons/linkedin-original.svg"></a>
+                  <a href=""> <img src="assets/generalicons/youtube.svg"></a>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-xl-3 col-sm-6 mb-4">
+            <div class="card">
+              <img src="assets/images/team/team2.jpg" alt="">
+              <div class="team-caption py-4 px-2">
+                <h4>Jhon Swith</h4>
+                <h6>Source chef</h6>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <div class="social-icons">
+                  <a href=""> <img src="assets/generalicons/facebook-fill.svg" alt=""></a>
+                  <a href=""> <img src="assets/generalicons/twitter-original.svg"></a>
+                  <a href=""> <img src="assets/generalicons/linkedin-original.svg"></a>
+                  <a href=""> <img src="assets/generalicons/youtube.svg"></a>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-xl-3 col-sm-6 mb-4">
+            <div class="card">
+              <img src="assets/images/team/team3.jpg" alt="">
+              <div class="team-caption py-4 px-2">
+                <h4>Jhon Swith</h4>
+                <h6>Source chef</h6>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <div class="social-icons">
+                  <a href=""> <img src="assets/generalicons/facebook-fill.svg" alt=""></a>
+                  <a href=""> <img src="assets/generalicons/twitter-original.svg"></a>
+                  <a href=""> <img src="assets/generalicons/linkedin-original.svg"></a>
+                  <a href=""> <img src="assets/generalicons/youtube.svg"></a>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-xl-3 col-sm-6 mb-4">
+            <div class="card">
+              <img src="assets/images/team/team4.jpg" alt="">
+              <div class="team-caption py-4 px-2">
+                <h4>Jhon Swith</h4>
+                <h6>Source chef</h6>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <div class="social-icons">
+                  <a href=""> <img src="assets/generalicons/facebook-fill.svg" alt=""></a>
+                  <a href=""> <img src="assets/generalicons/twitter-original.svg"></a>
+                  <a href=""> <img src="assets/generalicons/linkedin-original.svg"></a>
+                  <a href=""> <img src="assets/generalicons/youtube.svg"></a>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <!-- teamsectionend------------------------------------------ -->
+
+  <!-- bookfoodStart------------------------ -->
+  <section id="book-food">
+    <div class="book-food">
+      <div class="container book-food-text">
+        <div class="row text-center">
+          <div class="col-lg-9 col-md-12">
+            <h2>Backed with passion</h2>
+
+          </div>
+          <div class="col-lg-3 col-md-12 mt-lg-0 mt-4">
+            <button class="main-btn">book online</button>
+
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- bookfoodend------------------------ -->
+
+  <!-- downlodappstart------------------------------------- -->
+  <section id="downlod-app">
+    <div class="download-app wrapper">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-4 order-2 order-lg-1">
+            <div class="text-content">
+              <h1 class="mb-3"> download our app</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <div class="d-flex flex-wrap mt-4">
+                <a href=""><img src="assets/images/app/1.svg" class="me-3" alt=""></a>
+                <a href=""><img src="assets/images/app/2.svg" class="me-3" alt=""></a>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4 order-1 order-lg-2">
+            <img src="assets/images/app/phones.png" class="img-fluid" alt="">
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- downlodappend------------------------------------- -->
+
+
+  <!-- FOOTEstart------------------------------------------ -->
+  <!-- Footer section Start-->
+  <section class="footer_wrapper mt-3 mt-md-0">
+    <div class="container px-5 px-lg-0">
+      <div class="row">
+        <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+          <h5>FOODIES</h5>
+          <p class="mb-4 ps-0 company_details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+            dignissim erat ut laoreet
+            pharetra....</p>
+          <div class="contact-info">
+            <ul class="list-unstyled">
+              <li><a href="#"><img src="assets/generalicons/travel.svg" style="width: 30px; margin: 2px;" alt=""> No.
+                  96,
+                  South City, London</a></li>
+              <li><a href="#"><img src="assets/generalicons/phone.svg" style="width: 30px; margin: 2px;" alt="">+1 222
+                  3333</a></li>
+              <li><a href="#"><img src="assets/generalicons/envelope.svg" style="width: 30px; margin: 2px;"
+                    alt="">info@example.com</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+          <h5>Customer Support</h5>
+          <ul class="link-widget p-0">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Product Returns</a></li>
+            <li><a href="#">Wholesale Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+          <h5>Quick Links</h5>
+          <ul class="link-widget p-0">
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Term Of Use</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+          <h5>Newsletter</h5>
+          <div class="form-group mb-4">
+            <input type="email" class="form-control" placeholder="Enter Your Email Here">
+            <button type="submit" class="btn btn-dark mt-2">Subscribe</button>
+          </div>
+          <h5>Stay Connected</h5>
+          <ul class="social-network d-flex align-items-center p-0">
+            <li><a href="#"><img src="assets/generalicons/facebook-fill.svg" alt=""></a></li>
+            <li><a href="#"><img src="assets/generalicons/twitter-original.svg" alt=""></a></li>
+            <li><a href="#"><img src="assets/generalicons/linkedin-original.svg" alt=""></a></li>
+            <li><a href="#"><img src="assets/generalicons/youtube.svg" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid copyright-section">
+      <p>Copyright <a href="#">© FOODIES.</a> All Rights Reserved</p>
+    </div>
+  </section>
+</div>
+<!-- Footer Section Exit  -->
+<!-- FOOTEend------------------------------------------ -->

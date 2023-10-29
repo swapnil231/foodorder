@@ -1,0 +1,54 @@
+<!-- <p>searchresults works!</p> -->
+<section id="Expore-foods">
+  <div class="explore-food wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="text-content text-center">
+            <h2>
+              Lorem, ipsum dolor sit amet consectetur adipisicing.
+            </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur sint cum consectetur corporis
+              laborum
+              perspiciatis. Esse quibusdam nesciunt temporibus officiis architecto officia, magnam veritatis sit
+              amet
+              nulla non doloremque voluptate.</p>
+
+          </div>
+        </div>
+      </div>
+      <!-- <div class="d-flex justify-content-end">
+        <button class="main-btnsmall" (click)="gotAllProducts()">View All
+          Products</button>
+      </div> -->
+      <div>
+        <app-serchbox></app-serchbox>
+      </div>
+      <div class="row pt-5">
+        <div class="col-lg-4 col-md-6 mb-lg-0 mb-5" *ngFor="let el of foods">
+          <div class="card">
+
+            <img [src]="el.imageUrl" class="img-fluid" alt="" (click)="gotoDetailPage(el.id)">
+            <div class="p-4">
+
+              <h4>{{el.name}}<span class="favorite {{el.favorite?'':'not'}}">❤</span></h4>
+              <p><app-star-rating [stars]="el.stars"></app-star-rating> </p>
+              <p>{{el.origins}}</p>
+              <p>{{el.cookTime}} | serves: 1</p>
+              <span>{{el.price}} <del>$11.70</del></span>
+
+              <div class="row weapperow">
+                <button class="col m-2 mt-4 main-btnsmall" (click)="gotoDetailPage(el.id)">Order Now</button>
+                <button class="col m-2 mt-4 main-btnsmall">Add to Cart</button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
